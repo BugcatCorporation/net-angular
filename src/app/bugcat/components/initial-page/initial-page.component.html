@@ -1,0 +1,31 @@
+
+<div class="grafico-1 mt-4">
+    <ngx-charts-bar-vertical
+      [view]="[700, 400]"
+      [scheme]="colorScheme"
+      [results]="chartData"
+      [gradient]="gradient"
+      [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [legend]="showLegend"
+      [showXAxisLabel]="true"
+      [showYAxisLabel]="true"
+      [xAxisLabel]="xAxisLabel"
+      [yAxisLabel]="yAxisLabel"
+    >
+    </ngx-charts-bar-vertical>
+</div>
+
+<div class="grafico-2 mt-4">
+  <ngx-charts-pie-chart
+    [view]="[700, 400]"
+    [scheme]="colorScheme"
+    [results]="top5ProductsByPrice"
+    [gradient]="gradient"
+    [legend]="showLegend"
+    [explodeSlices]="false"
+    [doughnut]="false"
+    [animations]="true"
+  >
+  </ngx-charts-pie-chart>
+</div>

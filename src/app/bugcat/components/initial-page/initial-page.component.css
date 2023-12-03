@@ -1,0 +1,16 @@
+/* En tu archivo CSS */
+.grafico-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%; /* Ajusta el ancho según tus necesidades */
+    margin: 0 auto; /* Centra horizontalmente */
+  }
+
+  .grafico-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%; /* Ajusta el ancho según tus necesidades */
+    margin: 0 auto; /* Centra horizontalmente */
+  }

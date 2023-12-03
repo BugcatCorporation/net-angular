@@ -4,6 +4,7 @@ import { LayoutPageComponent } from "./components/layout-page/layout-page.compon
 import { CategoryPageComponent } from "./components/category-page/category-page.component";
 import { ProductsPageComponent } from "./components/products-page/products-page.component";
 import { ProductsCardPageComponent } from "./components/products-card-page/products-card-page.component";
+import { InitialPageComponent } from "./components/initial-page/initial-page.component";
 
 const routes: Routes = [
     {
@@ -21,6 +22,10 @@ const routes: Routes = [
             {
                 path: 'productosCard',
                 component: ProductsCardPageComponent
+            },
+            {
+                path: 'initial',
+                component: InitialPageComponent
             },
             {
                 path: '**',

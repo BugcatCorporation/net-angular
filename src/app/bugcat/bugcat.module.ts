@@ -9,6 +9,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { UpdateCategoryDialogComponent } from './components/update-category-dialog/update-category-dialog.component';
 import { AddEditCategoryDialogComponent } from './components/add-edit-category-dialog/add-edit-category-dialog.component';
 import { ProductsCardPageComponent } from './components/products-card-page/products-card-page.component';
+import { InitialPageComponent } from './components/initial-page/initial-page.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 
 
@@ -19,13 +21,16 @@ import { ProductsCardPageComponent } from './components/products-card-page/produ
     LayoutPageComponent,
     UpdateCategoryDialogComponent,
     AddEditCategoryDialogComponent,
-    ProductsCardPageComponent
+    ProductsCardPageComponent,
+    InitialPageComponent
   ],
   imports: [
     CommonModule,
     BugcatRoutingModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+
+    NgxChartsModule
   ],
   
 })
