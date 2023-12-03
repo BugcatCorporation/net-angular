@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class LayoutPageComponent {
 
   public sidebarItems = [
-    { label: 'Listado', icon: 'label', url: './initial' },
+    { label: 'Inicio', icon: 'label', url: './initial' },
     { label: 'Categorias', icon: 'category', url: './categories' },
     { label: 'Productos', icon: 'shopping_cart', url: './products' },
     { label: 'Cards', icon: 'shopping_basket', url: './productosCard' }
