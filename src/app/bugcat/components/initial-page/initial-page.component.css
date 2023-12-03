@@ -1,16 +1,17 @@
 /* En tu archivo CSS */
-.grafico-1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80%; /* Ajusta el ancho según tus necesidades */
-    margin: 0 auto; /* Centra horizontalmente */
-  }
 
-  .grafico-2 {
+
+
+.mat-card-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80%; /* Ajusta el ancho según tus necesidades */
-    margin: 0 auto; /* Centra horizontalmente */
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .mat-card {
+    width: 350px; /* Ajusta el ancho según tus preferencias */
+    height: 200px; /* Ajusta el alto según tus preferencias */
+    background-color: #333;
+    color: #fff;
+    margin-bottom: 20px;
   }

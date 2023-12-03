@@ -25,14 +25,34 @@ export class InitialPageComponent implements OnInit  {
   showYAxisLabel = true;
   yAxisLabel = 'Número de Productos';
 
+  // Cantidad de productos
+  totalProducts = 0;
+  // Cantidad de categorías
+  totalCategories = 0;
+
   constructor(
     private productService: ProductService,
-    private categoryService: CategoryService
+    private categoryService: CategoryService,
   ) {}
 
   ngOnInit(): void {
     this.generateChartData();
     this.generateTop5ProductsByPrice();
+
+    this.cantidadProductos();
+    this.cantidadCategorias();
+  }
+
+  cantidadProductos(): void {
+    this.productService.getProducts().subscribe((products: Product[]) => {
+      this.totalProducts = products.length;
+    });
+  }
+
+  cantidadCategorias(): void {
+    this.categoryService.getCategories().subscribe((categories: Category[]) => {
+      this.totalCategories = categories.length;
+    });
   }
 
   generateChartData(): void {

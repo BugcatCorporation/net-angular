@@ -15,6 +15,6 @@ export class LoginPageComponent {
     // Aquí puedes realizar lógica de autenticación si es necesario
 
     // Después de la autenticación, redirige a la nueva ruta
-    this.router.navigate(['/bugcat/categories']);
+    this.router.navigate(['/bugcat/initial']);
   }
 }

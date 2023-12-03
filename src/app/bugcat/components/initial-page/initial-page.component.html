@@ -1,31 +1,65 @@
+<h1 class="text-6xl text-center font-semibold mt-4">Productos de Bugcat Capoo</h1>
 
-<div class="grafico-1 mt-4">
-    <ngx-charts-bar-vertical
+<div class="mat-card-container mb-8 mt-8">
+  <mat-card class="mat-card">
+    <mat-card-header>
+      <mat-card-title class="text-4xl">Productos</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="mt-3">
+      <p>Existen {{ totalProducts }} productos</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-icon-button>
+        <mat-icon>shopping_cart</mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card class="mat-card">
+    <mat-card-header>
+      <mat-card-title class="text-4xl">Categorías</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="mt-3">
+      <p>Existen {{ totalCategories }} categorías</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-icon-button>
+        <mat-icon>category</mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<div class="flex justify-content-around flex-wrap">
+  <div class="grafico-1 mt-4">
+      <ngx-charts-bar-vertical
+        [view]="[700, 400]"
+        [scheme]="colorScheme"
+        [results]="chartData"
+        [gradient]="gradient"
+        [xAxis]="showXAxis"
+        [yAxis]="showYAxis"
+        [legend]="showLegend"
+        [showXAxisLabel]="true"
+        [showYAxisLabel]="true"
+        [xAxisLabel]="xAxisLabel"
+        [yAxisLabel]="yAxisLabel"
+      >
+      </ngx-charts-bar-vertical>
+  </div>
+  
+  <div class="grafico-2 mt-3">
+    <ngx-charts-pie-chart
       [view]="[700, 400]"
       [scheme]="colorScheme"
-      [results]="chartData"
+      [results]="top5ProductsByPrice"
       [gradient]="gradient"
-      [xAxis]="showXAxis"
-      [yAxis]="showYAxis"
       [legend]="showLegend"
-      [showXAxisLabel]="true"
-      [showYAxisLabel]="true"
-      [xAxisLabel]="xAxisLabel"
-      [yAxisLabel]="yAxisLabel"
+      [explodeSlices]="false"
+      [doughnut]="false"
+      [animations]="true"
     >
-    </ngx-charts-bar-vertical>
+    </ngx-charts-pie-chart>
+  </div>
 </div>
 
-<div class="grafico-2 mt-4">
-  <ngx-charts-pie-chart
-    [view]="[700, 400]"
-    [scheme]="colorScheme"
-    [results]="top5ProductsByPrice"
-    [gradient]="gradient"
-    [legend]="showLegend"
-    [explodeSlices]="false"
-    [doughnut]="false"
-    [animations]="true"
-  >
-  </ngx-charts-pie-chart>
-</div>
