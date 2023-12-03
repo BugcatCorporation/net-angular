@@ -1,0 +1,7 @@
+.bugcat {
+    background-image: url("../../../../assets/bugcat/bugcatfullhd.jfif");
+    background-size: cover; /* Hace que la imagen cubra completamente el fondo */
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+    background-position: center; /* Centra la imagen en el elemento */
+    min-height: 100vh;
+}

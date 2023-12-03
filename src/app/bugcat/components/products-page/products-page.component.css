@@ -1,0 +1,22 @@
+table {
+    width: 100%;
+}
+
+.mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+td,
+th {
+    width: 25%;
+}
+
+.container{
+    padding: 5rem;
+}
+
+.product-image {
+    max-width: 100px; /* Establece el ancho máximo según tus preferencias */
+    max-height: 100px; /* Establece la altura máxima según tus preferencias */
+}
