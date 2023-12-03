@@ -17,7 +17,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'bugcat',
+    redirectTo: 'auth',
     pathMatch: 'full'
   },
   {

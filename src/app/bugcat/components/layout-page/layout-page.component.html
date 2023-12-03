@@ -1,21 +1,19 @@
 <mat-sidenav-container fullscreen>
 
     <mat-sidenav #sidenav mode="push" [ngStyle]="{width: '250px'}">
-        <mat-toolbar color="warn">
-            <span>Menú</span>
+        <mat-toolbar class="flex justify-content-between flex-wrap" color="warn">
+            <span>
+                <img class="icon" src="../../../../assets/bugcat/capoo.jpg" alt="capoo-icon">
+            </span>
             <span class="spacer">
-            <button mat-icon-button (click)="sidenav.toggle()">
-                <mat-icon>menu</mat-icon>
-            </button>
+                <button mat-icon-button (click)="sidenav.toggle()">
+                    <mat-icon>menu</mat-icon>
+                </button>
             </span>
         </mat-toolbar>
 
         <mat-nav-list>
-            <mat-list-item 
-                *ngFor="let item of sidebarItems"
-                [routerLink]="item.url"
-                (click)="sidenav.toggle()"
-            >
+            <mat-list-item *ngFor="let item of sidebarItems" [routerLink]="item.url" (click)="sidenav.toggle()">
                 <mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
                 {{ item.label }}
             </mat-list-item>
@@ -23,7 +21,7 @@
 
     </mat-sidenav>
 
-    <mat-toolbar color="primary">
+    <mat-toolbar class="flex justify-content-between flex-wrap" color="primary">
         <button mat-icon-button (click)="sidenav.toggle()">
             <mat-icon>menu</mat-icon>
         </button>
@@ -33,7 +31,7 @@
         <!-- <span>{{ user?.email }} </span> -->
 
         <button mat-button (click)="onLogout()">
-            Logout
+            Salir
         </button>
 
     </mat-toolbar>

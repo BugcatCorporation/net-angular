@@ -1,0 +1,27 @@
+<h2 class="text-5xl text-center font-semibold mt-4">Productos de Bugcat Capoo</h2>
+
+<div class="grid">
+    <ng-container *ngFor="let product of productos">
+        <div class="p-col-12 p-md-4 p-lg-3 p-4"> <!-- Ajusta el valor de p-m según tus preferencias -->
+            <mat-card class="example-card">
+                <mat-card-header>
+                    <!-- Si tienes la URL de la imagen en la propiedad 'imagen' del producto -->
+                    <div mat-card-avatar class="example-header-image">
+                        <img class="icon-image" [src]="product.imagen" alt="Product Image">
+                    </div>
+                    <mat-card-title>{{ product.nombre }}</mat-card-title>
+                    <mat-card-subtitle>{{ product.descripcion }}</mat-card-subtitle>
+                </mat-card-header>
+                <!-- Ajuste del tamaño de la imagen -->
+                <img mat-card-image [src]="product.imagen" alt="Product Image" class="product-image">
+                <mat-card-content>
+                    <p>{{ product.descripcion }}</p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-button>LIKE</button>
+                    <button mat-button>SHARE</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </ng-container>
+</div>

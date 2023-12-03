@@ -8,6 +8,7 @@ import { LayoutPageComponent } from './components/layout-page/layout-page.compon
 import { ReactiveFormsModule } from '@angular/forms';
 import { UpdateCategoryDialogComponent } from './components/update-category-dialog/update-category-dialog.component';
 import { AddEditCategoryDialogComponent } from './components/add-edit-category-dialog/add-edit-category-dialog.component';
+import { ProductsCardPageComponent } from './components/products-card-page/products-card-page.component';
 
 
 
@@ -17,7 +18,8 @@ import { AddEditCategoryDialogComponent } from './components/add-edit-category-d
     ProductsPageComponent,
     LayoutPageComponent,
     UpdateCategoryDialogComponent,
-    AddEditCategoryDialogComponent
+    AddEditCategoryDialogComponent,
+    ProductsCardPageComponent
   ],
   imports: [
     CommonModule,

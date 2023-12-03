@@ -13,10 +13,12 @@ th {
 }
 
 .container{
-    padding: 5rem;
+    padding: 2rem 5rem 5rem 5rem;
 }
 
 .product-image {
     max-width: 100px; /* Establece el ancho máximo según tus preferencias */
     max-height: 100px; /* Establece la altura máxima según tus preferencias */
 }
+
+

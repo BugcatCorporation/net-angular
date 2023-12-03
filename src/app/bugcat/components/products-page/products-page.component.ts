@@ -6,6 +6,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatDialog } from '@angular/material/dialog';
 import { AddEditCategoryDialogComponent } from '../add-edit-category-dialog/add-edit-category-dialog.component';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-products-page',
@@ -94,5 +95,55 @@ export class ProductsPageComponent implements OnInit, AfterViewInit {
         this.dataSource.data = [...this.productos];
       }
     });
+  }
+
+  // Eliminar
+  deleteProduct(row: Product): void {
+    // Verifica que productoId existe en el objeto antes de llamar al servicio
+    if (row.productoId !== undefined) {
+      // Muestra la alerta de confirmación antes de eliminar el producto
+      Swal.fire({
+        title: 'Confirmar Eliminación',
+        text: '¿Estás seguro de que quieres eliminar este producto?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Sí, eliminar',
+        cancelButtonText: 'Cancelar'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          // Llama al servicio para eliminar el producto
+          this.productosService.deleteProduct(row.productoId).subscribe(
+            () => {
+              // Elimina el producto de la lista (simulado para este ejemplo)
+              this.productos = this.productos.filter(p => p.productoId !== row.productoId);
+              this.dataSource.data = this.productos;
+  
+              // Muestra una alerta de éxito con SweetAlert2
+              Swal.fire({
+                icon: 'success',
+                title: 'Producto Eliminado',
+                text: 'El producto fue eliminado con éxito.',
+                showCancelButton: false,
+                confirmButtonText: 'Aceptar',
+              });
+            },
+            (error) => {
+              console.error('Error deleting product:', error);
+  
+              // Muestra una alerta de error con SweetAlert2
+              Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Ocurrió un error al eliminar el producto.',
+                showCancelButton: false,
+                confirmButtonText: 'Aceptar',
+              });
+            }
+          );
+        }
+      });
+    } else {
+      console.error('El producto no tiene un ID válido:', row);
+    }
   }
 }

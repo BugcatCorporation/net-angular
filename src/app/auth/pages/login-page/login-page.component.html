@@ -1,7 +1,7 @@
 
 <div class="flex flex-column">
     
-    <span class="text-lg mb-4">Login</span>
+    <h2 class="text-5lg mb-4 text-white font-medium">Inicio de Sesión</h2>
 
     <mat-form-field>
         <mat-label>Usuario</mat-label>
@@ -13,7 +13,7 @@
         <input type="password" matInput placeholder="Contraseña">
     </mat-form-field>
 
-    <button mat-button mat-flat-button color="primary">
+    <button mat-button mat-flat-button color="primary" (click)="onLoginClick()" >
         <mat-icon>save</mat-icon>
         Ingresar
     </button>
